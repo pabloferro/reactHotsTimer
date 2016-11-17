@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
-import MapList from './MapList.js';
+import MapList from './MapList/MapList.js';
+import styles from './MapListScene.style';
 
 export default class MapListScene extends Component {
   constructor(props) {
@@ -18,10 +19,11 @@ export default class MapListScene extends Component {
 
   render() {
     return (
-      <View>
-        <Text>Maps</Text>
+      <View style={styles.container}>
+        <Text style={styles.title}>Select a Map</Text>
         <MapList maps={this.state.maps} />
       </View>
     );
   }
+
 }
